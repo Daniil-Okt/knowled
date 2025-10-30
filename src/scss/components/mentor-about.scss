@@ -39,6 +39,11 @@
         @media(max-width:767px){
             grid-template-columns: 1fr;
         }
+        @media(max-width:575px){
+            @media(max-width:575px){
+                gap: rem(16);
+            }
+        }
     }
 
     &__item {

@@ -1,0 +1,77 @@
+.mentor-meet {
+
+    &__titile {
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(30) rem(10);
+        @media(max-width:991px){
+            grid-template-columns: 1fr;
+        }
+        @media(max-width:575px){
+            gap: rem(16);
+        }
+    }
+
+    &__item {
+    }
+
+    &__item-img {
+        @include adaptiveClamp(margin-bottom, 72, 52);
+        min-width: rem(22);
+    }
+
+    &__item-title {
+        position: relative;
+        z-index: 1;
+        @include adaptiveClamp(margin-bottom, 34, 16);
+    }
+
+    &__item-list {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: rem(9);
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+        li {
+            display: flex;
+            gap: rem(10);
+
+            p {
+                margin-bottom: 0;
+                margin-top: rem(1);
+            }
+        }
+    }
+
+    &__item-number {
+        font-weight: 500;
+        @include adaptiveClamp(font-size, 200, 110);
+        line-height: 105%;
+        text-align: right;
+        color: var(--project-white);
+        position: absolute;
+        @include adaptiveClamp(bottom, -37, -22);
+        right: rem(-12);
+      
+    }
+}
+.pt-s {
+}
+.container {
+}
+.title-block {
+}
+.mentor-about {
+
+    &__item {
+    }
+
+    &__title {
+    }
+}
