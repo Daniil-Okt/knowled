@@ -6,7 +6,9 @@
 
 .mentor-prog {
     padding-bottom: 0 !important;
-   
+    
+
+
     &__title {
         padding-bottom: rem(42);
     
@@ -71,6 +73,10 @@
 
     .banner-wrapper-ult img {
         @include adaptiveClamp(height, 804, 705);
+
+        .mentor & {
+            @include adaptiveClamp(height, 480, 450);
+        }
     }
 
     &__btn {
@@ -85,4 +91,12 @@
             justify-content: space-between;
         }
     }
+}
+.mentor-prog.mentor {
+        .banner-wrapper-ult img {
+            @include adaptiveClamp(height, 480, 450);
+        }
+        .banner-trans-desc {
+            @include adaptiveClamp(padding-top, 158, 140);
+        }
 }

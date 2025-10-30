@@ -3,7 +3,7 @@ html.loaded {
 }
 
 body.white {
-    background: #fff !important;
+    // background: #fff !important;
 }
 
 .wrapper {
@@ -12,7 +12,7 @@ body.white {
     min-height: 100%;
 
     /** Поменять на clip - если используется в проекте position: sticky */
-    overflow: hidden;
+    overflow: clip ;
 }
 
 .page {
@@ -48,6 +48,17 @@ body.white {
 
 .pt-s {
     @include adaptiveClamp(padding-top, 172, 100);
+    background: #fff;
+}
+
+
+.call_btn.red {
+    border-color: var(--new-accent);
+    color: var(--new-accent);
+}
+
+footer {
+    background: var(--new-main);
 }
 
 

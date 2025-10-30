@@ -1,0 +1,84 @@
+.mentor-motiv {
+
+		&__title {
+		}
+
+		&__row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: rem(16) rem(10);
+
+            @media(max-width:767px){
+                grid-template-columns: 1fr;
+            }
+		}
+
+		&__item {
+            min-height: 0;
+            display: flex;
+            @include adaptiveClamp(gap, 24, 20);
+            @include adaptiveClamp(padding-top, 31, 20);
+            @include adaptiveClamp(padding-bottom, 31, 20);
+            @include adaptiveClamp(padding-left, 27, 20);
+            @include adaptiveClamp(padding-right, 27, 20);
+
+            @media(max-width:1399px){
+                flex-direction: column;
+            }
+            @media(max-width:767px){
+                min-height: rem(486);
+            }
+		}
+        .mentor-about__title {
+            @include adaptiveClamp(font-size, 28, 18);
+            @include adaptiveClamp(margin-bottom, 22, 13);
+        }
+
+		&__item-img {
+            // min-height: rem(247);
+            @include adaptiveClamp(min-width, 290, 0);
+            height: 100%;
+
+            img {
+                border-radius: 8px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            @media(max-width:1399px){
+                @include adaptiveClamp(height, 320, 247);
+                // max-height: rem(247);
+            }
+		}
+
+		&__item-body {
+            padding-top: rem(16);
+
+            @media(max-width:1399px){
+                padding-top: 0;
+            }
+		}
+}
+.pt-s {
+}
+.container {
+}
+.title-block {
+}
+.mentor-about {
+
+		&__item {
+		}
+
+		&__title {
+		}
+}
+.mentor-meet {
+
+		&__item-title {
+		}
+
+		&__item-list {
+		}
+}

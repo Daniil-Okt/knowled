@@ -1,6 +1,6 @@
 .mentor-about {
     @include adaptiveClamp(padding-top, 74, 52);
-
+   background: #fff;
     &__head {
         display: grid;
         grid-template-columns: 1fr 1fr;
