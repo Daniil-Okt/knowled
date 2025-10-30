@@ -1,0 +1,266 @@
+.mentor {
+        position: relative;
+        z-index: 3;
+        @include adaptiveClamp(padding-bottom, 144, 72);
+        border-radius: 0 0 50px 50px;
+        background: var(--project-white);
+
+        @media(max-width:767px){
+            border-radius: 0 0 40px 40px;
+        }
+
+		&__head {
+            padding-top: rem(32);
+            display: flex;
+            align-items: start;
+            gap: rem(70) rem(20);
+            border-bottom: 1px solid var(--project-gray);
+            @include adaptiveClamp(padding-bottom, 52, 32);
+
+
+            @media(max-width:1199px){
+                flex-direction: column;
+            }
+		}
+
+		&__acount {
+            display: flex;
+            gap: rem(24) rem(20);
+
+            @media(max-width:991px){
+                flex-direction: column;
+            }
+		}
+
+		&__acount-img {
+            margin-top: rem(-102);
+            img {
+                @include adaptiveClamp(width, 208, 139);
+                @include adaptiveClamp(height, 208, 139);
+                border-radius: 50%;
+                object-fit: cover;
+            }
+		}
+
+		&__acount-body {
+		}
+
+		&__acount-name {
+            @include adaptiveClamp(font-size, 34, 28);
+            font-weight: 600;
+            line-height: 100%;
+            margin-bottom: rem(12);
+
+            @media(max-width:767px){
+                margin-bottom: rem(20);
+            }
+		}
+
+		&__acount-prof {
+            @include adaptiveClamp(font-size, 20, 18);
+            line-height: 130%;
+            color: var(--text-secondary);
+            @include adaptiveClamp(margin-bottom, 20, 16);
+		}
+
+		&__acount-bot {
+            display: flex;
+            align-items: center;
+            gap: rem(8);
+            @media(max-width:575px){
+                flex-direction: column;
+                align-items: start;
+                gap: rem(24);
+            }
+		}
+
+		&__acount-link {
+            display: inline-flex;
+            align-items: center;
+            font-size: rem(16);
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: var(--new-main);
+            transition: all 0.3s ease  0s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            svg {
+                display: none;
+            }
+
+            @media(max-width:575px){
+                color: var(--new-accent);
+
+                svg {
+                    display: block;
+                    margin-right: rem(9);
+                    margin-left: rem(4);
+                }
+            }
+		}
+
+		&__acount-count {
+            display: flex;
+            align-items: center;
+            gap: rem(8);
+            font-size: rem(16);
+            line-height: 130%;
+            color: var(--text-secondary);
+
+            img {
+                width: rem(5);
+
+                @media(max-width:575px){
+                    width: rem(16);
+                }
+            }
+		}
+
+        &__btn {
+            margin-left: auto;
+
+            @media(max-width:1199px){
+                margin-left: 0;
+            }
+            @media(max-width:575px){
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span {
+                    display: block;
+                    width: rem(10);
+                }
+            }
+        }
+
+		&__row {
+            @include adaptiveClamp(padding-top, 55, 32);
+            display: flex;
+            gap: rem(32);
+
+            @media(max-width:1199px){
+                flex-direction: column;
+            }
+		}
+
+		&__body {
+            max-width: rem(640);
+
+            @media(max-width:1199px){
+                max-width: 100%;
+            }
+		}
+
+		&__body-title {
+            font-weight: 500;
+            @include adaptiveClamp(font-size, 20, 18);
+            line-height: 120%;
+            color: var(--text-main);
+            @include adaptiveClamp(margin-bottom, 28, 20);
+		}
+
+		&__body-text {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            @include adaptiveClamp(font-size, 18, 16);
+            line-height: 130%;
+            color: var(--text-secondary);
+            gap: 1.2em;
+
+            p {
+                margin: 0;
+                color: var(--text-secondary);
+            }
+		}
+
+		&__body-row {
+            justify-content: start;
+            @include adaptiveClamp(margin-top, 62, 20);
+
+
+            .item-whom__body-mark {
+                padding-top: rem(7);
+                padding-bottom: rem(7);
+            }
+
+            @media(max-width:767px){
+                display: none;
+            }
+		}
+
+		&__items {
+            display: flex;
+            flex-direction: column;
+            max-width: rem(533);
+      
+
+            @media(min-width:1200px){
+                border-radius: 8px;
+                overflow: hidden;
+                margin-left: auto;
+            }
+            @media(max-width:1199px){
+                gap: rem(16);
+            }
+		}
+
+		&__item {
+            min-height: 0;
+            display: flex;
+            @include adaptiveClamp(padding-left, 37, 20);
+            @include adaptiveClamp(padding-right, 37, 20);
+
+            .mentor-meet__item-img {
+                min-width: rem(32);
+                margin-right: rem(24);
+                margin-bottom: 0;
+
+                @media(max-width:767px){
+                    margin-bottom: rem(52);
+                }
+            }
+
+            .mentor-about__title {
+                @include adaptiveClamp(margin-bottom, 14, 16);
+                @include adaptiveClamp(font-size, 20.2, 20);
+            }
+            p {
+                font-weight: 400;
+                margin: 0;
+            }
+
+            @media(min-width:1200px){
+                border-radius: 0px;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #e4eaef;
+                }
+            }
+
+            @media(max-width:767px){
+                flex-direction: column;
+                min-height: rem(258);
+            }
+		}
+
+		&__item-body {
+		}
+}
+.mentor-about {
+
+		&__item {
+		}
+
+		&__title {
+		}
+}
+.mentor-meet {
+
+		&__item-img {
+		}
+}
