@@ -1,0 +1,53 @@
+html.loaded {
+    opacity: 1;
+}
+
+body.white {
+    background: #fff !important;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    /** Поменять на clip - если используется в проекте position: sticky */
+    overflow: hidden;
+}
+
+.page {
+    position: relative;
+    flex: 1 1 auto;
+  
+    [data-observ] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: rem(2);
+        background: transparent;
+        pointer-events: none;
+    }
+
+    &_start {
+        // padding-top: rem($headerHeight);
+    }
+}
+
+.title-block {
+    @include adaptiveClamp(font-size, 58, 44);
+    @include adaptiveClamp(margin-bottom, 70, 40);
+    font-weight: 500;
+    line-height: 105%;
+
+    span {
+        color: var(--new-main);
+    }
+}
+
+
+.pt-s {
+    @include adaptiveClamp(padding-top, 172, 100);
+}
+
+
