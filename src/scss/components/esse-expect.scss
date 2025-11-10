@@ -1,0 +1,69 @@
+.esse-expect {
+
+    &__row {
+        display: flex;
+        gap: rem(10);
+
+
+        @media(max-width:991px){
+            flex-direction: column;
+        }
+    }
+
+    &__row-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        gap: rem(10);
+        @include adaptiveClamp(min-width, 425, 380);
+        max-width: rem(425);
+
+        @media(max-width:991px){
+            max-width: 100%;
+            @include adaptiveClamp(min-width, 10, 5);
+            grid-template-columns: 1fr 1fr;
+        }
+        @media(max-width:767px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__img-big {
+        position: relative;
+        width: 100%;
+        flex: auto;
+ 
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            min-height: rem(586);
+
+            @media(max-width:991px){
+                @include adaptiveClamp(min-height, 586, 370);
+            }
+        }
+    }
+
+    &__img-big-text {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include adaptiveClamp(padding, 54, 20);
+        font-weight: 500;
+        @include adaptiveClamp(font-size, 20, 16);
+        line-height: 130%;
+        color: var(--project-white);
+
+        p {
+            max-width: rem(593);
+        }
+    }   
+}

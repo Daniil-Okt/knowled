@@ -13,6 +13,20 @@
         @media(max-width:575px){
             gap: rem(16);
         }
+
+
+        &.grid-four {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: rem(10);
+            @media(max-width:1199px){
+                grid-template-columns: 1fr 1fr;
+                gap: rem(30) rem(10);
+            }
+
+            @media(max-width:991px){
+                grid-template-columns: 1fr;
+            }
+        }
     }
 
     &__item {

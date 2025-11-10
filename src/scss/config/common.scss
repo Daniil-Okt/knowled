@@ -43,8 +43,25 @@ body.white {
     span {
         color: var(--new-main);
     }
+
+    &.min-m-b {
+        @include adaptiveClamp(margin-bottom, 16, 14);
+    }
+
+    &.blue {
+        color: var(--new-main);
+    }
 }
 
+.text-un {
+    font-size: 18px;
+    line-height: 130%;
+    color: var(--text-secondary);
+    @include adaptiveClamp(font-size, 18, 16);
+    &.m-b {
+        @include adaptiveClamp(margin-bottom, 60, 35);
+    }
+}
 
 .pt-s {
     @include adaptiveClamp(padding-top, 172, 100);
@@ -68,75 +85,19 @@ footer {
 
 
 
-.eng, .right .eng {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 52px;
-    min-width: 52px;
-    height: 24px;
-    border-radius: 38px;
-    background: var(--new-accent);
-    padding-left: 8px;
-    padding-right: 8px;
-
-	&__text {
-        font-weight: 600;
-        font-size: 14px;
-        color: var(--project-white);
-        line-height: 1;
-        margin-left: auto;
-
-        .active & {
-            margin-left: 0;
-        }
-	}
-
-	&__circle {
-        position: absolute;
-        top: 1.6px;
-        left: 2px;
-        width: 19.5;
-        height: 19.5;
-        border-radius: 50%;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-        background: var(--project-white);
-
-        .active & {
-            left: unset;
-            right: 2px;
-        }
-	}
+img.cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
-header._two {
 
-    .wrapper_header {
-        ul li {
-            margin-right: 35px;
-
-            @media(max-width:1399px){
-                margin-right: 25px;
-
-                a {
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-
-    .wrapper_header nav {
-        margin: 0px;
-    }
-
-    .wrapper_header ul {
-        padding-left: 0;
-    }
-
-    .add_org {
-        a {
-            font-size: 10px;
-        }
+.bot-section {
+    border-radius: 0 0 50px 50px;
+    @include adaptiveClamp(padding-bottom, 118, 52);
+    
+    @media (max-width: 767px) {
+        border-radius: 0 0 40px 40px;
     }
 }
