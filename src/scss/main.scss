@@ -3,7 +3,7 @@
 /**
 * Подключение шрифтов локально из папки "./src/fonts"
 */
-@import 'config/fonts';
+// @import 'config/fonts';
 
 /** Подключение переменных */
 @import 'config/vars';
@@ -63,4 +63,9 @@
 @import 'components/mentor-motiv';
 @import 'components/mentor-all';
 @import 'components/mentor-page';
+
+
+@import 'components/esse-expect';
+@import 'components/esse-connect';
+
 

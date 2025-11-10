@@ -2,6 +2,7 @@
 
 		&__title {
             @include adaptiveClamp(font-size, 58, 40);
+
 		}
 
 		&__row {
@@ -12,6 +13,16 @@
                 flex-direction: column;
                 gap: rem(16);
             }
+            .esse-revie & {
+                flex-direction: row;
+                gap: 0;
+
+                @media(max-width:767px){
+                    flex-direction: column;
+                    gap: rem(16);
+                }
+            }
+            
 		}
 
 		&__item {
@@ -55,6 +66,7 @@
         }
     }
 
+
     @media(max-width:1399px){
         &:nth-child(2) {
             .item-whom__head {
@@ -71,6 +83,64 @@
                 border-radius: 8px;
         }
     }
+
+    .esse-revie & {
+        &.left {
+            width: 23%;
+    
+            @media(max-width:1399px){
+                display: flex !important;
+                width: 30%;
+            }
+            @media(max-width:767px){
+                width: 100%;
+
+                .item-whom__body-line {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                }
+                .item-whom__head {
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                }
+                
+            }
+        }
+
+        @media(max-width:1399px){
+            width: 35%;
+    
+            &:nth-child(2) {
+                .item-whom__head {
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+            }
+        }
+        @media(max-width:991px){
+            .item-whom__head {
+                border-radius: 0px;
+                border-radius: 0px;
+            }
+        }
+        @media(max-width:767px){
+            width: 100%;
+    
+            .item-whom__head {
+                border-radius: 8px !important;
+                border-radius: 8px !important;
+            }
+
+            &:not(.left) {
+                display: none !important;
+            }
+        }
+    }
+
+
+
 		&__head {
             display: flex;
             align-items: center;
@@ -87,6 +157,11 @@
             .left & {
                 text-align: left;
                 justify-content: start;
+            }
+
+            .esse-revie & {
+                @include adaptiveClamp(font-size, 18, 17);
+                @include adaptiveClamp(height, 50, 50);
             }
 		}
 
@@ -112,13 +187,26 @@
             &:nth-child(odd) {
                 background: #eef7ff;
             }
-            
+
+
+            .esse-revie & {
+                @include adaptiveClamp(min-height, 80, 70);
+                @include adaptiveClamp(padding-left, 20, 8);
+                @include adaptiveClamp(padding-right, 20, 8);
+                @include adaptiveClamp(padding-top, 16, 15);
+                @include adaptiveClamp(padding-bottom, 16, 15);
+            }
 		}
 
 		&__title {
             @include adaptiveClamp(font-size, 20, 18);
             font-weight: 500;
             color: var(--new-main);
+
+
+            .esse-revie & {
+                @include adaptiveClamp(font-size, 16, 15.8);
+            }
 		}
 
         &__body-row {
